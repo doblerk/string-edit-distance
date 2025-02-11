@@ -10,13 +10,14 @@ class StringEditDistance:
         self.x = x
         self.y = y
 
-    def cost_del(letter: str) -> int:
+    def cost_del(self, letter: str) -> int:
         return 1
 
-    def cost_ins(letter: str) -> int:
+    def cost_ins(self, letter: str) -> int:
         return 1
     
-    def cost_sub(letter1: str,
+    def cost_sub(self,
+                 letter1: str,
                  letter2: str) -> int:
         c_sub = 1 if letter1.lower() == letter2.lower() else 2
         return (letter1 != letter2) * c_sub
@@ -51,7 +52,7 @@ class StringEditDistance:
 
     def calc_sed(self,
                  D: np.ndarray,
-                 P: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+                 P: np.ndarray) -> None:
         n, m = len(self.x), len(self.y)
         for i in range(1, n + 1):
             for j in range(1, m + 1):
@@ -70,5 +71,3 @@ class StringEditDistance:
                     P[i, j] = "↑"
                 elif D[i, j] == m_3:
                     P[i, j] = "←"
-        
-        return D, P
