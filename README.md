@@ -19,8 +19,6 @@ python3 -m pip install -e .
 
 ## Example usage
 ```python
-import numpy as np
-
 from sed.string_edit_distance import StringEditDistance
 
 
@@ -56,7 +54,7 @@ According to the cost matrix $D$, the string edit distance is $6$ (lower right v
 
 #### Pointer Matrix P
 
-The pointers can be used to reconstruct the edit operations, by following the trajectory from the lower right position.
+According to the pointer matrix $P$, these pointers can be used to reconstruct the edit operations by following the trajectory from the lower right position.
 
 |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|
