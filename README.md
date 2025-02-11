@@ -1,5 +1,18 @@
 # String Edit Distance
 
-## String edit distance to quantify how dissimilar two strings are to one another
+This repository contains an implementation of the string edit distance algorithm to compute the minimum sequence of cost edit operations between two strings.
 
-This repository contains an implementation of string edit distance using a dynamic programming approach
+## Installation
+
+#### Prerequisites
+- Python >= 3.10
+
+#### Install
+```bash
+# Create virtual environment
+python3.10 -m venv venv
+source venv/bin/activate
+
+# Install the Python package
+python3 -m pip install -e .
+```
