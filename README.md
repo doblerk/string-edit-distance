@@ -45,19 +45,16 @@ for row in P:
 
 #### Cost Matrix M
 
-|   0 | 1 | 2 | 3 | 4 | 5 | 6 |
-|-----|---|---|---|---|---|---|
-| 1   | 2 | 1 | 2 | 3 | 4 | 5 |
-| 2   | 1 | 2 | 1 | 2 | 3 | 4 |
-| 3   | 2 | 1 | 2 | 1 | 2 | 3 |
-| 4   | 3 | 2 | 1 | 2 | 3 | 4 |
-| 5   | 4 | 3 | 2 | 3 | 4 | 5 |
-| 6   | 5 | 4 | 3 | 4 | 5 | 6 |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+| 1 | 2 | 1 | 2 | 3 | 4 | 5 |
+| 2 | 1 | 2 | 1 | 2 | 3 | 4 |
+| 3 | 2 | 1 | 2 | 1 | 2 | 3 |
+| 4 | 3 | 2 | 1 | 2 | 3 | 4 |
+| 5 | 4 | 3 | 2 | 3 | 4 | 5 |
+| 6 | 5 | 4 | 3 | 4 | 5 | 6 |
 
 #### Pointer Matrix P
 
-|   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|
 |   | ← | ← | ← | ← | ← | ← |
 | ↑ | ↖ | ↖ | ← | ↖ | ↖ | ↖ |
 | ↑ | ↖ | ↑ | ↖ | ← | ← | ← |
@@ -68,7 +65,7 @@ for row in P:
 
 ## Further information
 
-The current implementation is restricted to lowercase and uppercase Roman letters, represented by the set $\{a, b, c, \ldots, z, A, B, C, \ldots, Z\}$, with cost of edit operations defined as:
+The current implementation is restricted to lowercase and uppercase Roman letters, represented by the set ${a, b, c, \ldots, z, A, B, C, \ldots, Z}$, with cost of edit operations defined as:
 
 $$
 c(l \xrightarrow{} \epsilon) = c(\epsilon \xrightarrow{} l') = 1
