@@ -27,8 +27,6 @@ from sed.string_edit_distance import StringEditDistance
 string1 = 'ABABBB'
 string2 = 'BABAAA'
 
-n, m = len(string1), len(string2)
-
 sed = StringEditDistance(string1, string2)
 
 D = sed.init_cost_matrix()
@@ -43,7 +41,9 @@ for row in P:
     print(" ".join(row))
 ```
 
-#### Cost Matrix M
+#### Cost Matrix D
+
+According to the cost matrix $D$, the string edit distance is $6$ (lower right value).
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
@@ -55,6 +55,8 @@ for row in P:
 | 6 | 5 | 4 | 3 | 4 | 5 | 6 |
 
 #### Pointer Matrix P
+
+The pointers can be used to reconstruct the edit operations, by following the trajectory from the lower right position.
 
 |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|
