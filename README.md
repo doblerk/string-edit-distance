@@ -56,6 +56,7 @@ for row in P:
 
 #### Pointer Matrix P
 
+|   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|
 |   | ← | ← | ← | ← | ← | ← |
 | ↑ | ↖ | ↖ | ← | ↖ | ↖ | ↖ |
@@ -70,7 +71,10 @@ for row in P:
 The current implementation is restricted to lowercase and uppercase Roman letters, represented by the set $\{a, b, c, \ldots, z, A, B, C, \ldots, Z\}$, with cost of edit operations defined as:
 
 $$
-c(l \xrightarrow{} \epsilon) = c(\epsilon \xrightarrow{} l') = 1 \\
+c(l \xrightarrow{} \epsilon) = c(\epsilon \xrightarrow{} l') = 1
+$$
+
+$$
 c(l \xrightarrow{} l') = \begin{cases}
     0 \ \text{if 'A'=='A' or 'v'=='v'} \\
     1 \ \text{if 'a'=='A' or 'V'=='v'} \\
